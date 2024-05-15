@@ -30,8 +30,6 @@ public class QuizM {
     public Scene createScene() {
         AppMenuBar appMenuBarM = new AppMenuBar(primaryStage);
         MenuBar menuBarM = appMenuBarM.createMenuBar();
-        appMenuBarM.setOpenMenuItemDisabled(true);
-        appMenuBarM.setSaveMenuItemDisabled(true);
 
         Label titleLabelM = new Label("Character");
         titleLabelM.setFont(Font.font("Book Antiqua", 24));
@@ -194,8 +192,6 @@ public class QuizM {
         gridPaneM.add(nameBoxM, 0, 0);
         gridPaneM.add(levelBoxM, 1, 0);
         gridPaneM.add(randomizeButtonM, 5, 0);
-
-
 
         gridPaneM.add(strBoxM, 0, 2);
         gridPaneM.add(dexBoxM, 1, 2);

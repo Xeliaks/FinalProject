@@ -30,8 +30,6 @@ public class QuizC {
     public Scene createScene() {
         AppMenuBar appMenuBarC = new AppMenuBar(primaryStage);
         MenuBar menuBarC = appMenuBarC.createMenuBar();
-        appMenuBarC.setOpenMenuItemDisabled(true);
-        appMenuBarC.setSaveMenuItemDisabled(true);
 
         Label titleLabelC = new Label("Character");
         titleLabelC.setFont(Font.font("Book Antiqua", 24));

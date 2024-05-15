@@ -24,8 +24,6 @@ public class BaseScene {
     public Scene createScene() {
         AppMenuBar appMenuBar = new AppMenuBar(primaryStage);
         MenuBar menuBar = appMenuBar.createMenuBar();
-        appMenuBar.setOpenMenuItemDisabled(true);
-        appMenuBar.setSaveMenuItemDisabled(true);
         appMenuBar.setEditMenuDisabled(true);
         appMenuBar.setReturnToMainMenuItemDisabled(true);
 

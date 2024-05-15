@@ -1,0 +1,13 @@
+
+”	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΑΐΕ¥8Ψ„υχ1J$f21fd880-1326-4f3f-ab8f-cdfc509918e1
+”	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Β®±8Ψ„υχ1J$0d921170-6917-4578-a879-b1302aa0cd30
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρƒγ8Ψ„υχ1J$4b3bd681-1c3a-48e5-8669-a3e657f031fc
+`
+java:S2259“"BA "NullPointerException" could be thrown; "temp" is nullable here.(™Γ8Ό»Ύυχ1
+U
+java:S2589‰"7Remove this expression which always evaluates to "true"(Λϋλ―8Ό»Ύυχ1
+d	java:S131A""Add a default case to this switch.(°Σχ8¤Ψ„υχ1J$35047dbc-03a2-4fd4-a9c5-84174dd016f2
+@
+java:S1128"$Remove this unused import 'java.io'.(¬›γD8Ε»Ύυχ1
+M
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Δπ18Ε»Ύυχ1
