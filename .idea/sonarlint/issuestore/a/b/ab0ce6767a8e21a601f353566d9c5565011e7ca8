@@ -1,0 +1,21 @@
+
+s
+java:S1066š"/Merge this if statement with the enclosing one.(Á±ÒÅ8”–úê÷1J$688fe9d1-91bb-4535-986d-aade2e77703a
+®
+java:S1450"fRemove the "browseCharacterMenuItem" field and declare it as a local variable in the relevant methods.(²¦¡üÿÿÿÿ8 –úê÷1J$8759c7b5-0f22-487d-b4ed-233caa331141
+¬
+java:S1450"dRemove the "browseMonsterMenuItem" field and declare it as a local variable in the relevant methods.(ßæş¹ıÿÿÿÿ8 –úê÷1J$4365ad46-b5ef-4acf-bde0-d2569f808762
+
+java:S1450"[Remove the "exitMenuItem" field and declare it as a local variable in the relevant methods.(ê¦×8 –úê÷1J$078ffb20-b6df-48b1-95f9-83d029131a94
+š
+java:S3776 "RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(Ë†£·øÿÿÿÿ8¡–úê÷1J$9049cbce-14b4-435c-a8bd-a6d884574393
+o
+java:S1602]",Remove useless curly braces around statement(š”ÊÄ8§–úê÷1J$c94f4a9d-1a79-428a-b795-ec6aaf1ecfa4
+p
+java:S1602Œ",Remove useless curly braces around statement(®šÔ³8©–úê÷1J$92f29f64-5090-43ff-a6d8-246bf1dbc780
+p
+java:S1602",Remove useless curly braces around statement(í…äµ8©–úê÷1J$146ddab9-cca6-4eb5-b7ba-0567f88b81d3
+
+java:S6201š"ZReplace this instanceof check and cast with 'instanceof TextInputControl textinputcontrol'(Á±ÒÅ8ª–úê÷1J$d35daa2c-ed8c-49db-a1bc-c089f34b1df7
+œ
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8«–úê÷1J$d742eaeb-b7a6-46da-849b-54e26ebc43b7

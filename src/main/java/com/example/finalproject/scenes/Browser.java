@@ -2,5 +2,5 @@ package com.example.finalproject.scenes;
 
 
 
-public class Observer {
+public class Browser {
 }
