@@ -13,7 +13,7 @@ public class CharacterLinkedList {
     public Iterable<? extends CharacterC> getCharacters() {
         List<CharacterC> characters = new ArrayList<>();
         Node current = head;
-        while (current!= null) {
+        while (current != null) {
             characters.add(current.characterC);
             current = current.next;
         }
@@ -65,79 +65,47 @@ public class CharacterLinkedList {
         CharacterC characterC = new CharacterC();
         for (String line : lines) {
             String[] parts = line.split(":");
-            if (parts.length == 2) {
-                String key = parts[0].trim();
-                String value = parts[1].trim();
-                switch (key) {
-                    case "name":
-                        characterC.setNameC(value);
-                        break;
-                    case "level":
-                        characterC.setLevelC(Integer.parseInt(value));
-                        break;
-                    case "ancestry":
-                        characterC.setAncestryC(value);
-                        break;
-                    case "background":
-                        characterC.setBackgroundC(value);
-                        break;
-                    case "characterClass":
-                        characterC.setCharacterClassC(value);
-                        break;
-                    case "strength":
-                        characterC.setStrengthC(Integer.parseInt(value));
-                        break;
-                    case "dexterity":
-                        characterC.setDexterityC(Integer.parseInt(value));
-                        break;
-                    case "constitution":
-                        characterC.setConstitutionC(Integer.parseInt(value));
-                        break;
-                    case "intelligence":
-                        characterC.setIntelligenceC(Integer.parseInt(value));
-                        break;
-                    case "wisdom":
-                        characterC.setWisdomC(Integer.parseInt(value));
-                        break;
-                    case "charisma":
-                        characterC.setCharismaC(Integer.parseInt(value));
-                        break;
-                    case "alignment":
-                        characterC.setAlignmentC(value);
-                        break;
-                    case "armorClass":
-                        characterC.setArmorClassC(Integer.parseInt(value));
-                        break;
-                    case "hitPoints":
-                        characterC.setHitPointsC(Integer.parseInt(value));
-                        break;
-                    case "perception":
-                        characterC.setPerceptionC(Integer.parseInt(value));
-                        break;
-                    case "speed":
-                        characterC.setSpeedC(Integer.parseInt(value));
-                        break;
-                    case "attack":
-                        characterC.setAttackC(value);
-                        break;
-                    case "bio":
-                        characterC.setBioC(value);
-                        break;
-                    case "imagelink":
-                        characterC.setImageLinkC(value);
-                        break;
-                }
+            if (parts.length < 2) continue;
+            String key = parts[0].trim();
+            String value = parts[1].trim();
+            switch (key) {
+                case "Name": characterC.setNameC(value); break;
+                case "Level": characterC.setLevelC(Integer.parseInt(value)); break;
+                case "Ancestry": characterC.setAncestryC(value); break;
+                case "Background": characterC.setBackgroundC(value); break;
+                case "Class": characterC.setCharacterClassC(value); break;
+                case "Strength": characterC.setStrengthC(Integer.parseInt(value)); break;
+                case "Dexterity": characterC.setDexterityC(Integer.parseInt(value)); break;
+                case "Constitution": characterC.setConstitutionC(Integer.parseInt(value)); break;
+                case "Intelligence": characterC.setIntelligenceC(Integer.parseInt(value)); break;
+                case "Wisdom": characterC.setWisdomC(Integer.parseInt(value)); break;
+                case "Charisma": characterC.setCharismaC(Integer.parseInt(value)); break;
+                case "Alignment": characterC.setAlignmentC(value); break;
+                case "Armor Class": characterC.setArmorClassC(Integer.parseInt(value)); break;
+                case "Hit Points": characterC.setHitPointsC(Integer.parseInt(value)); break;
+                case "Perception": characterC.setPerceptionC(Integer.parseInt(value)); break;
+                case "Speed": characterC.setSpeedC(Integer.parseInt(value)); break;
+                case "Attack": characterC.setAttackC(value); break;
+                case "Bio": characterC.setBioC(value); break;
+                case "Image Link": characterC.setImageLinkC(value); break;
             }
         }
         return characterC;
     }
 
     public void quickSort() {
-        head = quickSortRec(head, null);
+        head = quickSortRec(head, getTail(head));
+    }
+
+    private Node getTail(Node cur) {
+        while (cur != null && cur.next != null) {
+            cur = cur.next;
+        }
+        return cur;
     }
 
     private Node quickSortRec(Node start, Node end) {
-        if (start == end || start == null || start.next == end) {
+        if (start == end) {
             return start;
         }
 
@@ -162,7 +130,7 @@ public class CharacterLinkedList {
         Node curr = start;
         CharacterC pivot = start.characterC;
 
-        while (start != null && start != end) {
+        while (start != end) {
             if (start.characterC.getNameC().compareTo(pivot.getNameC()) < 0) {
                 pivot_prev = curr;
                 CharacterC temp = curr.characterC;
@@ -175,7 +143,7 @@ public class CharacterLinkedList {
 
         CharacterC temp = curr.characterC;
         curr.characterC = pivot;
-        start.characterC = temp;
+        pivot = temp;
 
         return pivot_prev;
     }
@@ -212,4 +180,5 @@ public class CharacterLinkedList {
         return characterCS;
     }
 }
+
 

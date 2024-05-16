@@ -1,16 +1,28 @@
 package com.example.finalproject.Entities;
 
+import com.example.finalproject.scenes.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 public class CharacterInfo extends VBox {
-    public CharacterInfo(CharacterC character) {
+    private CharacterC character;
+    private Stage primaryStage;
+
+    public CharacterInfo(CharacterC character, Stage primaryStage) {
+        this.character = character;
+        this.primaryStage = this.primaryStage;
+        this.setAlignment(Pos.CENTER);
+        this.setSpacing(10);
+
+
         HBox imageBox = new HBox();
         ImageView imageView = new ImageView();
         Image image = new Image("file:" + character.getImageLinkC());
@@ -38,5 +50,11 @@ public class CharacterInfo extends VBox {
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(10));
         this.setStyle("-fx-background-color: black;");
+
+
+        this.setOnMouseClicked((MouseEvent event) -> {
+            Browser browserScene = new Browser(character);
+            this.primaryStage.setScene(browserScene.getScene());
+        });
     }
 }

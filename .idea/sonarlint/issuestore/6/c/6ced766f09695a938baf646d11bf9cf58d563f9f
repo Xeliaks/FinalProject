@@ -1,2 +1,10 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆñƒãJ$2e69ca02-b468-42f2-a859-6c56559210a8
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆñƒã8‰§ş†ø1J$a55b38c0-6b49-439b-b4a5-99c0ce2ea1dd
+²
+java:S4165"jRemove this useless assignment; "primaryStage" already holds the assigned value along all execution paths.(ŠÈåëıÿÿÿÿ8Í³•‡ø1J$c8a292fc-ed70-4833-86e1-313336df42bc
+{
+java:S1172"3Remove this unused method parameter "primaryStage".(õÕÍòûÿÿÿÿ8ˆù–‡ø1J$cdff3e3b-c13e-48fc-b205-dc8afa73adff
+w
+java:S1656"/Remove or correct this useless self-assignment.(ŠÈåëıÿÿÿÿ8Ò³•‡ø1J$e8f35485-77c2-438a-adb7-652d406fd929
+u
+java:S1068"-Remove this unused "character" private field.(Ï¨×äùÿÿÿÿ8®”‡ø1J$ebc55e3b-a589-4e48-afd6-fcec114f3e26

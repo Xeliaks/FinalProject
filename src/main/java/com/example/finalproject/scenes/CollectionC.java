@@ -20,6 +20,7 @@ public class CollectionC {
     private void initializeCharacterList() {
         String folderPath = "src/main/characters";
         characterLinkedList.loadFromFolder(folderPath);
+        characterLinkedList.quickSort();
     }
 
     public CollectionC(Stage primaryStage) {
@@ -47,7 +48,7 @@ public class CollectionC {
         int row = 0;
         int col = 0;
         for (CharacterC character : characterLinkedList.getCharacters()) {
-            CharacterInfo characterInfo = new CharacterInfo(character);
+            CharacterInfo characterInfo = new CharacterInfo(character, primaryStage);
             gridPane.add(characterInfo, col, row);
             col++;
             if (col == 4) {
@@ -55,6 +56,18 @@ public class CollectionC {
                 row++;
             }
         }
+
+        searchButton.setOnAction(e -> {
+            String searchText = searchField.getText().trim();
+            CharacterC result = characterLinkedList.binarySearch(searchText);
+            if (result != null) {
+                gridPane.getChildren().clear();
+                CharacterInfo characterInfo = new CharacterInfo(result, primaryStage);
+                gridPane.add(characterInfo, 0, 0);
+            } else {
+                searchField.setText("Character not found");
+            }
+        });
 
         VBox vbox = new VBox(20);
         vbox.setPadding(new Insets(10));
@@ -80,7 +93,6 @@ public class CollectionC {
         return this.scene;
     }
 }
-
 
 
 
