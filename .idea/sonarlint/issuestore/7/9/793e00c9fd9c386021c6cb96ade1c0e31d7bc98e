@@ -1,13 +1,24 @@
 
-”	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÀÅ¥8šØ„õ÷1J$f21fd880-1326-4f3f-ab8f-cdfc509918e1
-”	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Â®±8šØ„õ÷1J$0d921170-6917-4578-a879-b1302aa0cd30
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆñƒã8œØ„õ÷1J$4b3bd681-1c3a-48e5-8669-a3e657f031fc
-`
-java:S2259“"BA "NullPointerException" could be thrown; "temp" is nullable here.(™ÃŸš8¼»¾õ÷1
-U
-java:S2589‰"7Remove this expression which always evaluates to "true"(Ëûë¯8¼»¾õ÷1
-d	java:S131A""Add a default case to this switch.(°Ó÷8¤Ø„õ÷1J$35047dbc-03a2-4fd4-a9c5-84174dd016f2
-@
-java:S1128"$Remove this unused import 'java.io'.(¬›ãD8Å»¾õ÷1
-M
-java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18Å»¾õ÷1
+”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÀÅ¥8çßŠ„ø1J$98153b67-f616-456b-b3f7-0a4693f07f8c
+”	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Â®±8çßŠ„ø1J$7fec1869-7840-4eb6-8178-b9df683cd697
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆñƒã8èßŠ„ø1J$0657cab8-ac3e-4bc5-98a0-7ad6a6b14173
+†
+java:S2259š"BA "NullPointerException" could be thrown; "temp" is nullable here.(™ÃŸš8«àŠ„ø1J$845d6c23-9396-47c8-bc11-bc965f7d6615
+{
+java:S2589"7Remove this expression which always evaluates to "true"(Ëûë¯8«àŠ„ø1J$7d04db31-f8d3-4c44-a7a5-46bcdee66d7b
+d	java:S131H""Add a default case to this switch.(°Ó÷8°àŠ„ø1J$33ab22b9-3be9-4aea-8245-987f7be51a73
+€
+java:S1117¾"<Rename "monsters" which hides the field declared at line 16.(¶í×8²àŠ„ø1J$20bbe9aa-1888-4301-b47c-1b98d393ed23
+€
+java:S1117Ô"<Rename "monsters" which hides the field declared at line 16.(ÌèŠ•8³àŠ„ø1J$58634e9a-5114-46d9-a4e5-039766ad1a52
+f
+java:S1128"$Remove this unused import 'java.io'.(¬›ãD8³àŠ„ø1J$2337ec4b-6b8e-4956-9c6b-21fcb15de4e4
+s
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18³àŠ„ø1J$85191f4f-ef06-4815-8e0c-d3a50e143bf5
+x
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8³àŠ„ø1J$ec374012-bcc1-4e97-b926-d751a9a30e80
+s
+java:S1128
+"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8³àŠ„ø1J$23ef5320-0c21-4933-b21b-09dff798d377
+t
+java:S1144A"1Remove this unused private "parseMonster" method.(¹ù½ø8³àŠ„ø1J$9d704174-cb10-48cd-8650-930b1552000f

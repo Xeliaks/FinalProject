@@ -1,11 +1,13 @@
 
-”	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΑΐΕ¥8©λυχ1J$8ee65b87-3bab-4f89-8734-f91ac98dd2a9
-”	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Β®±8©λυχ1J$4e9ada68-f388-4482-947e-849a3fca9b97
-	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρƒγ8ªλυχ1J$c95271b6-898f-449a-bd04-0691ad5625a4
-f
-java:S2259¨"CA "NullPointerException" could be thrown; "start" is nullable here.(¦σογϋÿÿÿÿ8‹›½‚ψ1
-Z
-java:S2589‹"7Remove this expression which always evaluates to "true"(θύ»Τϋÿÿÿÿ8‹›½‚ψ1
-Z
-java:S2589‰"7Remove this expression which always evaluates to "true"(ΦωΊ§ÿÿÿÿÿ8‹›½‚ψ1
-d	java:S131=""Add a default case to this switch.(°Σχ8Έλυχ1J$05aff74d-1bce-436d-8621-fba94cc6fa5e
+”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΑΐΕ¥8©λυχ1J$ef757d0e-f31a-4826-a11f-4724e05372d0
+”	java:S117΅"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Β®±8©λυχ1J$2df8e900-f31d-4faf-b11c-7896633750a9
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρƒγ8ªλυχ1J$24e31bae-533e-4a7d-a839-0ec70a6854bc
+
+java:S2259²"CA "NullPointerException" could be thrown; "start" is nullable here.(¦σογϋÿÿÿÿ8‹›½‚ψ1J$ab3cbeb5-6a0d-4f4d-ab63-34747442c23d
+€
+java:S2589•"7Remove this expression which always evaluates to "true"(θύ»Τϋÿÿÿÿ8‹›½‚ψ1J$bcce7408-644d-42a3-924d-cbecec969a93
+€
+java:S2589“"7Remove this expression which always evaluates to "true"(ΦωΊ§ÿÿÿÿÿ8‹›½‚ψ1J$210ff9dd-2d31-42ec-86a0-e73c6fccdd0f
+i
+java:S1452"&Remove usage of generic wildcard type.(ε±Κρ8Β†ψ1J$576ffe55-11d1-4479-99bd-e5c90c788cd0
+d	java:S131G""Add a default case to this switch.(°Σχ8Έλυχ1J$3142e4b5-28b0-42cc-bded-91bf9e32aa37

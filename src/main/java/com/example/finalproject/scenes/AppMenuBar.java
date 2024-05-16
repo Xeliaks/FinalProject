@@ -136,4 +136,12 @@ public class AppMenuBar {
         returnToMainMenuItem.setDisable(isDisabled);
     }
 
+    public void setBrowseCharacterMenuItemDisabled(boolean isDisabled) {
+        browseCharacterMenuItem.setDisable(isDisabled);
+    }
+
+    public void setBrowseMonsterMenuItemDisabled(boolean isDisabled) {
+        browseMonsterMenuItem.setDisable(isDisabled);
+    }
+
 }

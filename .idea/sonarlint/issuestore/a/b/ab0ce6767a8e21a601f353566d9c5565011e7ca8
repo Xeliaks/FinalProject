@@ -1,19 +1,15 @@
 
 r
-java:S1066y"/Merge this if statement with the enclosing one.(Á±ÒÅ8”–úê÷1J$599654f2-fb66-4c75-86c9-58c967f3dd0b
-®
-java:S1450"fRemove the "browseCharacterMenuItem" field and declare it as a local variable in the relevant methods.(²¦¡üÿÿÿÿ8 –úê÷1J$4534aac1-0c60-4a9d-8622-dd25aa1f5f9d
-¬
-java:S1450"dRemove the "browseMonsterMenuItem" field and declare it as a local variable in the relevant methods.(ßæş¹ıÿÿÿÿ8 –úê÷1J$8e63d952-0531-4da6-b345-16d7c92de588
+java:S1066y"/Merge this if statement with the enclosing one.(Á±ÒÅ8Õíï„ø1J$6166c45a-3ae8-46c1-8aaf-06fa58a8ce9a
 
-java:S1450"[Remove the "exitMenuItem" field and declare it as a local variable in the relevant methods.(ê¦×8 –úê÷1J$66674ca2-8a8a-4e9f-9bc9-24cbe9f36b52
+java:S1450"[Remove the "exitMenuItem" field and declare it as a local variable in the relevant methods.(ê¦×8Şíï„ø1J$e89a18ad-b4c8-452a-94e5-07162b0a6d41
 o
-java:S1602<",Remove useless curly braces around statement(š”ÊÄ8§–úê÷1J$7e0dcb1b-2d88-441c-90db-68b05bb6bece
+java:S1602<",Remove useless curly braces around statement(š”ÊÄ8áíï„ø1J$d5bfcaf7-d6db-4ce3-852f-eda19c736353
 o
-java:S1602k",Remove useless curly braces around statement(®šÔ³8©–úê÷1J$857130ac-aeb7-4313-a882-e84429cf50ee
+java:S1602k",Remove useless curly braces around statement(®šÔ³8âíï„ø1J$0a78eb37-a789-48f8-ad70-15372c5bdd5d
 o
-java:S1602o",Remove useless curly braces around statement(í…äµ8©–úê÷1J$0c70fe2f-5e65-4746-9ca7-a668e3043053
+java:S1602o",Remove useless curly braces around statement(í…äµ8âíï„ø1J$dd688e49-0913-42bd-947a-0f8cc68d0ee0
 
-java:S6201y"ZReplace this instanceof check and cast with 'instanceof TextInputControl textinputcontrol'(Á±ÒÅ8ª–úê÷1J$f5cc96e4-2c53-401f-8edb-9c8d83b65ea3
+java:S6201y"ZReplace this instanceof check and cast with 'instanceof TextInputControl textinputcontrol'(Á±ÒÅ8ãíï„ø1J$8b423856-d5c2-4a36-a7b4-35dceb5607b9
 œ
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8ÍÖ·õ÷1J$c5ccea9f-95a5-4349-9ec8-d5c304fe622a
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8äíï„ø1J$e19022a6-7a5b-4894-b31a-552370c2091a

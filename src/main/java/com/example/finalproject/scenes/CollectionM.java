@@ -13,6 +13,7 @@ public class CollectionM {
     public CollectionM(Stage primaryStage) {
         AppMenuBar appMenuBar = new AppMenuBar(primaryStage);
         MenuBar menuBar = appMenuBar.createMenuBar();
+        appMenuBar.setBrowseMonsterMenuItemDisabled(true);
 
         BorderPane root = new BorderPane();
         Label label = new Label("Monster Collection");

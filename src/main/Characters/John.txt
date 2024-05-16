@@ -1,0 +1,19 @@
+name: John
+level: 1
+ancestry: Human
+background: Bartender
+class: Barbarian
+strength: 18
+dexterity: 14
+constitution: 16
+intelligence: 10
+wisdom: 12
+charisma: 12
+alignment: CN
+ac: 18
+hp: 24
+speed: 25
+perception: 5
+attack: 7
+bio: Winner of every Bar Fight.
+imageLink: src/main/images/Characters/barb.png

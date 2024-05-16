@@ -10,6 +10,16 @@ import java.util.List;
 public class CharacterLinkedList {
     private Node head;
 
+    public Iterable<? extends CharacterC> getCharacters() {
+        List<CharacterC> characters = new ArrayList<>();
+        Node current = head;
+        while (current!= null) {
+            characters.add(current.characterC);
+            current = current.next;
+        }
+        return characters;
+    }
+
     private static class Node {
         CharacterC characterC;
         Node next;
@@ -114,7 +124,7 @@ public class CharacterLinkedList {
                         characterC.setBioC(value);
                         break;
                     case "imagelink":
-                        characterC.setImagelinkC(value);
+                        characterC.setImageLinkC(value);
                         break;
                 }
             }

@@ -1,0 +1,10 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ˆñƒãJ$37ca06e9-0a14-45cd-ad21-1ca78dbd5e48
+«
+java:S4144³"bUpdate this method so that its implementation is not identical to "setCharacterClassC" on line 63.(ß„»®ûÿÿÿÿ8ÖÅ±€ø1J$464af3a9-ce88-495b-875c-1e92f79c6539
+¨
+java:S4144·"_Update this method so that its implementation is not identical to "setArmorClassC" on line 127.(ˆ£„‰úÿÿÿÿ8ÞÙ³€ø1J$a934b393-16bd-4e03-b49a-6a61a2922a42
+¢
+java:S4144»"^Update this method so that its implementation is not identical to "setHitPointsC" on line 135.(£óÕË8‡‹µ€ø1J$5e5ccb3b-9cba-4240-abb6-d7ed4923aec5
+l
+java:S1128")Remove this unused import 'java.io.File'.(†Ð¥Å8àïÇ†ø1J$1f5ba550-c09f-48b6-ac0f-742292e054e1

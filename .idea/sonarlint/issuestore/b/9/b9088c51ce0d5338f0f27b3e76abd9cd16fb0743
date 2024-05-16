@@ -1,5 +1,14 @@
 
-·
-java:S1192>"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 14 times.(øÛ³8İ Óó÷1J$636dcedc-c79b-43b4-9876-3a0a7b45c7be
+•
+java:S1192$"RDefine a constant instead of duplicating this literal "src/main/monsters" 3 times.(–‘ê®8õÚŒ„ø1J$0d24ebd0-7606-4e0c-86c9-6289e6ae943d
 š
-java:S1192%"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 16 times.(²ƒºˆ8İ Óó÷1J$1c908889-934d-45e7-aab1-0968ee307852
+java:S1192/"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 16 times.(²ƒºˆ8öÚŒ„ø1J$2c1ff50c-b5a7-42d6-8ea1-c0e0ed826533
+·
+java:S1192H"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 14 times.(øÛ³8öÚŒ„ø1J$ef578edd-95f7-47de-940d-c6a45284e93f
+•
+java:S3776("RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(Ÿ¼µ8¡ÛŒ„ø1J$6f47f266-4589-432b-84f7-ff2165957386
+n	java:S106ï"+Replace this use of System.out by a logger.(ë·ú8Ûç‘„ø1J$1ac4225f-46c2-44e3-991e-1622c928373f
+€
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8±ÛŒ„ø1J$c41b07db-90cc-410b-b73e-e836e0b65d89
+s
+java:S1068"+Remove this unused "monster" private field.(›¶‰üÿÿÿÿ8˜ö¨„ø1J$79aefe7c-129a-46e9-914e-e9f414cf19b3

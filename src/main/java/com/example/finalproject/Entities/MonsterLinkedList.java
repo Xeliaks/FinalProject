@@ -13,7 +13,11 @@ import java.util.List;
 
 public class MonsterLinkedList {
     private Node head;
+    private List<Monster> monsters = new ArrayList<>();
 
+    public List<Monster> getMonsters() {
+        return monsters;
+    }
     private static class Node {
         Monster monster;
         Node next;
@@ -23,6 +27,7 @@ public class MonsterLinkedList {
             this.next = null;
         }
     }
+
 
     public void add(Monster monster) {
         Node newNode = new Node(monster);
@@ -39,21 +44,23 @@ public class MonsterLinkedList {
 
     public void loadFromFolder(String folderPath) {
         File folder = new File(folderPath);
-        File[] files = folder.listFiles();
-        if (files != null) {
-            for (File file : files) {
+        File[] listOfFiles = folder.listFiles();
+        if (listOfFiles != null) {
+            for (File file : listOfFiles) {
                 if (file.isFile() && file.getName().endsWith(".txt")) {
+                    MonsterParser parser = new MonsterParser();
                     try {
-                        List<String> lines = Files.readAllLines(Paths.get(file.getAbsolutePath()));
-                        Monster monster = parseMonster(lines);
+                        List<String> lines = Files.readAllLines(file.toPath());
+                        Monster monster = parser.parseMonster(lines);
                         add(monster);
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
             }
         }
     }
+
 
     private Monster parseMonster(List<String> lines) {
         Monster monster = new Monster();

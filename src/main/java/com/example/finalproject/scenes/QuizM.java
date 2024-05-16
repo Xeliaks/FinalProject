@@ -1,5 +1,6 @@
 package com.example.finalproject.scenes;
 
+import com.example.finalproject.Entities.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -15,23 +16,32 @@ import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
+import java.nio.file.Files;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class QuizM {
 
     private Stage primaryStage;
+    private MonsterLinkedList monsterLinkedList = new MonsterLinkedList();
+    private Monster monster = new Monster();
 
     public QuizM(Stage primaryStage) {
         this.primaryStage = primaryStage;
+        initializeMonsterList();
+    }
+
+    private void initializeMonsterList() {
+        String folderPath = "src/main/monsters";
+        monsterLinkedList.loadFromFolder(folderPath);
     }
 
     public Scene createScene() {
         AppMenuBar appMenuBarM = new AppMenuBar(primaryStage);
         MenuBar menuBarM = appMenuBarM.createMenuBar();
 
-        Label titleLabelM = new Label("Character");
+        Label titleLabelM = new Label("Monster");
         titleLabelM.setFont(Font.font("Book Antiqua", 24));
         titleLabelM.setAlignment(Pos.TOP_CENTER);
         titleLabelM.setStyle("-fx-text-fill: white;");
@@ -71,6 +81,10 @@ public class QuizM {
         VBox levelBoxM = new VBox(10, levelLabelM, levelFieldM);
 
         Button randomizeButtonM = new Button("Randomize");
+
+        Button importButtonM = new Button("Import");
+
+        Button exportButtonM = new Button("Export");
 
         Label strLabelM = new Label("STR:");
         strLabelM.setStyle("-fx-text-fill: white;");
@@ -166,24 +180,101 @@ public class QuizM {
 
         Image uploadImageM = new Image("file:src/main/images/UPicButton.png");
         ImageView uploadPictureButtonM = new ImageView(uploadImageM);
-        uploadPictureButtonM.setFitWidth(150);
-        uploadPictureButtonM.setFitHeight(150);
+        uploadPictureButtonM.setFitWidth(200);
+        uploadPictureButtonM.setFitHeight(200);
         uploadPictureButtonM.setPreserveRatio(true);
         uploadPictureButtonM.setStyle("-fx-cursor: hand;");
 
         uploadPictureButtonM.setOnMouseClicked(event -> {
-            FileChooser fileChooserM = new FileChooser();
-            fileChooserM.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png"));
-            File selectedFileM = fileChooserM.showOpenDialog(primaryStage);
-            if (selectedFileM != null) {
+            FileChooser fileChooserC = new FileChooser();
+            fileChooserC.setTitle("Open Image File");
+            fileChooserC.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png"));
+            File characterFolderC = new File("src/main/images/monsters");
+            if (characterFolderC.exists() && characterFolderC.isDirectory()) {
+                fileChooserC.setInitialDirectory(characterFolderC);
+            }
+            File selectedFileC = fileChooserC.showOpenDialog(primaryStage);
+            if (selectedFileC != null) {
                 try {
-                    Image selectedImageM = new Image(new FileInputStream(selectedFileM));
-                    double currentWidthM = uploadPictureButtonM.getFitWidth();
-                    double currentHeightM = uploadPictureButtonM.getFitHeight();
-                    uploadPictureButtonM.setFitWidth(currentWidthM * 2);
-                    uploadPictureButtonM.setFitHeight(currentHeightM * 2);
-                    uploadPictureButtonM.setImage(selectedImageM);
+                    Image selectedImageC = new Image(new FileInputStream(selectedFileC));
+                    uploadPictureButtonM.setImage(selectedImageC);
                 } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        importButtonM.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Import Monster File");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text files (*.txt)", "*.txt"));
+            File monsterFolder = new File("src/main/monsters");
+            if (monsterFolder.exists() && monsterFolder.isDirectory()) {
+                fileChooser.setInitialDirectory(monsterFolder);
+            }
+            File selectedFile = fileChooser.showOpenDialog(primaryStage);
+            if (selectedFile != null) {
+                try {
+                    List<String> lines = Files.readAllLines(selectedFile.toPath());
+                    MonsterParser parser = new MonsterParser();
+                    Monster importedMonster = parser.parseMonster(lines);
+                    nameFieldM.setText(importedMonster.getNameM());
+                    levelFieldM.setText(String.valueOf(importedMonster.getLevelM()));
+                    strFieldM.setText(String.valueOf(importedMonster.getStrengthM()));
+                    dexFieldM.setText(String.valueOf(importedMonster.getDexterityM()));
+                    conFieldM.setText(String.valueOf(importedMonster.getConstitutionM()));
+                    intFieldM.setText(String.valueOf(importedMonster.getIntelligenceM()));
+                    wisFieldM.setText(String.valueOf(importedMonster.getWisdomM()));
+                    chaFieldM.setText(String.valueOf(importedMonster.getCharismaM()));
+                    alignmentFieldM.setText(importedMonster.getAlignmentM());
+                    acFieldM.setText(String.valueOf(importedMonster.getArmorClassM()));
+                    hpFieldM.setText(String.valueOf(importedMonster.getHitPointsM()));
+                    speedFieldM.setText(String.valueOf(importedMonster.getSpeedM()));
+                    perceptionFieldM.setText(String.valueOf(importedMonster.getPerceptionM()));
+                    attackFieldM.setText(importedMonster.getAttackM());
+                    bioAreaM.setText(importedMonster.getBioM());
+                    uploadPictureButtonM.setImage(new Image("file:" + importedMonster.getImageLinkM()));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Error: The file format is incorrect.");
+                }
+            }
+        });
+
+        exportButtonM.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Export Monster File");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text files (*.txt)", "*.txt"));
+            File monsterFolder = new File("src/main/monsters");
+            if (monsterFolder.exists() && monsterFolder.isDirectory()) {
+                fileChooser.setInitialDirectory(monsterFolder);
+            }
+            File selectedFile = fileChooser.showSaveDialog(primaryStage);
+            if (selectedFile != null) {
+                try (PrintWriter writer = new PrintWriter(new FileWriter(selectedFile))) {
+                    writer.println("name: " + nameFieldM.getText());
+                    writer.println("level: " + levelFieldM.getText());
+                    writer.println("strength: " + strFieldM.getText());
+                    writer.println("dexterity: " + dexFieldM.getText());
+                    writer.println("constitution: " + conFieldM.getText());
+                    writer.println("intelligence: " + intFieldM.getText());
+                    writer.println("wisdom: " + wisFieldM.getText());
+                    writer.println("charisma: " + chaFieldM.getText());
+                    writer.println("alignment: " + alignmentFieldM.getText());
+                    writer.println("armorClass: " + acFieldM.getText());
+                    writer.println("hitPoints: " + hpFieldM.getText());
+                    writer.println("perception: " + perceptionFieldM.getText());
+                    writer.println("speed: " + speedFieldM.getText());
+                    writer.println("attack: " + attackFieldM.getText());
+                    writer.println("bio: " + bioAreaM.getText());
+
+                    Image image = uploadPictureButtonM.getImage();
+                    String imagePath = "";
+                    if (image != null) {
+                        imagePath = image.getUrl().replace("file:", "");
+                    }
+                    writer.println("imageLink: " + imagePath);
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
@@ -191,6 +282,8 @@ public class QuizM {
 
         gridPaneM.add(nameBoxM, 0, 0);
         gridPaneM.add(levelBoxM, 1, 0);
+        gridPaneM.add(importButtonM, 3, 0);
+        gridPaneM.add(exportButtonM, 4, 0);
         gridPaneM.add(randomizeButtonM, 5, 0);
 
         gridPaneM.add(strBoxM, 0, 2);
@@ -228,12 +321,6 @@ public class QuizM {
         );
         vboxM.setBackground(new Background(backgroundM));
 
-        bioAreaM.prefWidthProperty().bind(sceneM.widthProperty().divide(4));
-        bioAreaM.prefHeightProperty().bind(sceneM.heightProperty().divide(4));
-        uploadPictureButtonM.fitWidthProperty().bind(sceneM.widthProperty().divide(4));
-        uploadPictureButtonM.fitHeightProperty().bind(sceneM.heightProperty().divide(4));
-
         return sceneM;
     }
 }
-

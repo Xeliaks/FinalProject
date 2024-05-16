@@ -1,18 +1,18 @@
 
 Ÿ
-java:S11925"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 19 times.(âÀœøÿÿÿÿ8¾¿‚ø1J$64a2fe06-3b08-4d51-b75b-f68f419ccbd7
+java:S11925"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 19 times.(âÀœøÿÿÿÿ8¾¿‚ø1J$9006dba2-baf4-43a0-9d70-19a7b2e02dc5
 ¼
-java:S1192N"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 17 times.(ğ¦şÅûÿÿÿÿ8¾¿‚ø1J$7ad47612-528e-4552-bdea-19e055fca37b
+java:S1192N"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 17 times.(ğ¦şÅûÿÿÿÿ8¾¿‚ø1J$bed87951-c72a-4e56-af7f-8a65227fdac8
 œ
-java:S1192)"TDefine a constant instead of duplicating this literal "src/main/characters" 3 times.(€îŠ¬ùÿÿÿÿ8¾¿‚ø1J$1ac595db-eec0-4e04-8bbe-2128628a010a
+java:S1192)"TDefine a constant instead of duplicating this literal "src/main/characters" 3 times.(€îŠ¬ùÿÿÿÿ8ı‡šƒø1J$3e0649ea-b01f-4a8f-a680-05fb5d111312
 •
-java:S3776."RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(Ÿ¼µ8ù¿‚ø1J$5f59570e-cd15-4ee8-b56b-9859fcd6cd28
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(Ÿ¼µ8ù¿‚ø1J$c62dad75-7345-4a9a-8a23-1213a7941a91
 ‚
-java:S1117ş">Rename "characterC" which hides the field declared at line 33.(Ï¬¬Š8ƒÀ‚ø1J$eb691b53-1c48-4cb2-aa6a-40550487fe45
-n	java:S106–"+Replace this use of System.out by a logger.(ë·ú8…À‚ø1J$f886ac2e-0951-43b6-910c-73f874be427e
-œ
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8‹À‚ø1J$97ad49de-4fa2-4d7b-ae2e-c98ea8565efd
-s
-java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18‹À‚ø1J$897919b5-4980-445e-8a82-36b5efebb520
+java:S1117ú">Rename "characterC" which hides the field declared at line 33.(Ï¬¬Š8ƒÀ‚ø1J$03856db2-d5c3-4f3d-aa0a-6504e1bbcd25
+n	java:S106’"+Replace this use of System.out by a logger.(ë·ú8…À‚ø1J$547b89cc-45b4-4a86-8e94-4b0371161fa0
 v
-java:S1068!".Remove this unused "characterC" private field.(Ö€ãˆûÿÿÿÿ8‹À‚ø1J$54d4d63f-581f-48bb-a12a-bd26af163701
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8±ùÑ†ø1
+M
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18²ùÑ†ø1
+v
+java:S1068!".Remove this unused "characterC" private field.(Ö€ãˆûÿÿÿÿ8‹À‚ø1J$3cd57e3a-7170-4da2-90af-c43858032d60

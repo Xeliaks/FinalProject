@@ -168,11 +168,11 @@ public class CharacterC {
         this.bioC = bioC;
     }
 
-    public String getImagelinkC() {
+    public String getImageLinkC() {
         return imagelinkC;
     }
 
-    public void setImagelinkC(String imagelinkC) {
+    public void setImageLinkC(String imagelinkC) {
         this.imagelinkC = imagelinkC;
     }
 
@@ -188,22 +188,6 @@ public class CharacterC {
         this.hitPointsC = hitPointsC;
     }
 
-    public void setImageLinkC(String imagelinkC) {
-        this.imagelinkC = imagelinkC;
-    }
 
-    public String getClassC() {
-        return characterClassC;
-    }
-    public int getAcC() {
-        return armorClassC;
-    }
 
-    public int getHpC() {
-        return hitPointsC;
-    }
-
-    public String getImageLinkC() {
-        return imagelinkC;
-    }
 }

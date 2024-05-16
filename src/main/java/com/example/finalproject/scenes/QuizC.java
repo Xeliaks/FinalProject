@@ -93,10 +93,6 @@ public class QuizC {
         Button exportButtonC = new Button("Export");
 
 
-
-
-
-
         Label ancestryLabelC = new Label("Ancestry:");
         ancestryLabelC.setStyle("-fx-text-fill: white;");
         TextField ancestryFieldC = new TextField();
@@ -257,7 +253,7 @@ public class QuizC {
                     levelFieldC.setText(String.valueOf(characterC.getLevelC()));
                     ancestryFieldC.setText(characterC.getAncestryC());
                     backgroundFieldC.setText(characterC.getBackgroundC());
-                    classFieldC.setText(characterC.getClassC());
+                    classFieldC.setText(characterC.getCharacterClassC());
                     strFieldC.setText(String.valueOf(characterC.getStrengthC()));
                     dexFieldC.setText(String.valueOf(characterC.getDexterityC()));
                     conFieldC.setText(String.valueOf(characterC.getConstitutionC()));
@@ -265,8 +261,8 @@ public class QuizC {
                     wisFieldC.setText(String.valueOf(characterC.getWisdomC()));
                     chaFieldC.setText(String.valueOf(characterC.getCharismaC()));
                     alignmentFieldC.setText(characterC.getAlignmentC());
-                    acFieldC.setText(String.valueOf(characterC.getAcC()));
-                    hpFieldC.setText(String.valueOf(characterC.getHpC()));
+                    acFieldC.setText(String.valueOf(characterC.getArmorClassC()));
+                    hpFieldC.setText(String.valueOf(characterC.getHitPointsC()));
                     speedFieldC.setText(String.valueOf(characterC.getSpeedC()));
                     perceptionFieldC.setText(String.valueOf(characterC.getPerceptionC()));
                     attackFieldC.setText(characterC.getAttackC());
