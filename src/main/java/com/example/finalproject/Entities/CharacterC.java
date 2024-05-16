@@ -1,6 +1,8 @@
 package com.example.finalproject.Entities;
 
-public class Character {
+import java.io.File;
+
+public class CharacterC {
     private String nameC;
     private int levelC;
     private String ancestryC;
@@ -20,6 +22,7 @@ public class Character {
     private String attackC;
     private String bioC;
     private String imagelinkC;
+
 
     public String getNameC() {
         return nameC;
@@ -171,5 +174,36 @@ public class Character {
 
     public void setImagelinkC(String imagelinkC) {
         this.imagelinkC = imagelinkC;
+    }
+
+    public void setClassC(String characterClassC) {
+        this.characterClassC = characterClassC;
+    }
+
+    public void setAcC(int armorClassC) {
+        this.armorClassC = armorClassC;
+    }
+
+    public void setHpC(int hitPointsC) {
+        this.hitPointsC = hitPointsC;
+    }
+
+    public void setImageLinkC(String imagelinkC) {
+        this.imagelinkC = imagelinkC;
+    }
+
+    public String getClassC() {
+        return characterClassC;
+    }
+    public int getAcC() {
+        return armorClassC;
+    }
+
+    public int getHpC() {
+        return hitPointsC;
+    }
+
+    public String getImageLinkC() {
+        return imagelinkC;
     }
 }

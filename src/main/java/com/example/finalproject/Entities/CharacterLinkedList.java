@@ -11,17 +11,17 @@ public class CharacterLinkedList {
     private Node head;
 
     private static class Node {
-        Character character;
+        CharacterC characterC;
         Node next;
 
-        Node(Character character) {
-            this.character = character;
+        Node(CharacterC characterC) {
+            this.characterC = characterC;
             this.next = null;
         }
     }
 
-    public void add(Character character) {
-        Node newNode = new Node(character);
+    public void add(CharacterC characterC) {
+        Node newNode = new Node(characterC);
         if (head == null) {
             head = newNode;
         } else {
@@ -41,8 +41,8 @@ public class CharacterLinkedList {
                 if (file.isFile() && file.getName().endsWith(".txt")) {
                     try {
                         List<String> lines = Files.readAllLines(Paths.get(file.getAbsolutePath()));
-                        Character character = parseCharacter(lines);
-                        add(character);
+                        CharacterC characterC = parseCharacter(lines);
+                        add(characterC);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -51,8 +51,8 @@ public class CharacterLinkedList {
         }
     }
 
-    private Character parseCharacter(List<String> lines) {
-        Character character = new Character();
+    private CharacterC parseCharacter(List<String> lines) {
+        CharacterC characterC = new CharacterC();
         for (String line : lines) {
             String[] parts = line.split(":");
             if (parts.length == 2) {
@@ -60,66 +60,66 @@ public class CharacterLinkedList {
                 String value = parts[1].trim();
                 switch (key) {
                     case "name":
-                        character.setNameC(value);
+                        characterC.setNameC(value);
                         break;
                     case "level":
-                        character.setLevelC(Integer.parseInt(value));
+                        characterC.setLevelC(Integer.parseInt(value));
                         break;
                     case "ancestry":
-                        character.setAncestryC(value);
+                        characterC.setAncestryC(value);
                         break;
                     case "background":
-                        character.setBackgroundC(value);
+                        characterC.setBackgroundC(value);
                         break;
                     case "characterClass":
-                        character.setCharacterClassC(value);
+                        characterC.setCharacterClassC(value);
                         break;
                     case "strength":
-                        character.setStrengthC(Integer.parseInt(value));
+                        characterC.setStrengthC(Integer.parseInt(value));
                         break;
                     case "dexterity":
-                        character.setDexterityC(Integer.parseInt(value));
+                        characterC.setDexterityC(Integer.parseInt(value));
                         break;
                     case "constitution":
-                        character.setConstitutionC(Integer.parseInt(value));
+                        characterC.setConstitutionC(Integer.parseInt(value));
                         break;
                     case "intelligence":
-                        character.setIntelligenceC(Integer.parseInt(value));
+                        characterC.setIntelligenceC(Integer.parseInt(value));
                         break;
                     case "wisdom":
-                        character.setWisdomC(Integer.parseInt(value));
+                        characterC.setWisdomC(Integer.parseInt(value));
                         break;
                     case "charisma":
-                        character.setCharismaC(Integer.parseInt(value));
+                        characterC.setCharismaC(Integer.parseInt(value));
                         break;
                     case "alignment":
-                        character.setAlignmentC(value);
+                        characterC.setAlignmentC(value);
                         break;
                     case "armorClass":
-                        character.setArmorClassC(Integer.parseInt(value));
+                        characterC.setArmorClassC(Integer.parseInt(value));
                         break;
                     case "hitPoints":
-                        character.setHitPointsC(Integer.parseInt(value));
+                        characterC.setHitPointsC(Integer.parseInt(value));
                         break;
                     case "perception":
-                        character.setPerceptionC(Integer.parseInt(value));
+                        characterC.setPerceptionC(Integer.parseInt(value));
                         break;
                     case "speed":
-                        character.setSpeedC(Integer.parseInt(value));
+                        characterC.setSpeedC(Integer.parseInt(value));
                         break;
                     case "attack":
-                        character.setAttackC(value);
+                        characterC.setAttackC(value);
                         break;
                     case "bio":
-                        character.setBioC(value);
+                        characterC.setBioC(value);
                         break;
                     case "imagelink":
-                        character.setImagelinkC(value);
+                        characterC.setImagelinkC(value);
                         break;
                 }
             }
         }
-        return character;
+        return characterC;
     }
 
     public void quickSort() {
@@ -150,38 +150,38 @@ public class CharacterLinkedList {
 
         Node pivot_prev = start;
         Node curr = start;
-        Character pivot = start.character;
+        CharacterC pivot = start.characterC;
 
         while (start != null && start != end) {
-            if (start.character.getNameC().compareTo(pivot.getNameC()) < 0) {
+            if (start.characterC.getNameC().compareTo(pivot.getNameC()) < 0) {
                 pivot_prev = curr;
-                Character temp = curr.character;
-                curr.character = start.character;
-                start.character = temp;
+                CharacterC temp = curr.characterC;
+                curr.characterC = start.characterC;
+                start.characterC = temp;
                 curr = curr.next;
             }
             start = start.next;
         }
 
-        Character temp = curr.character;
-        curr.character = pivot;
-        start.character = temp;
+        CharacterC temp = curr.characterC;
+        curr.characterC = pivot;
+        start.characterC = temp;
 
         return pivot_prev;
     }
 
-    public Character binarySearch(String name) {
-        List<Character> characters = toList();
+    public CharacterC binarySearch(String name) {
+        List<CharacterC> characterCS = toList();
         int left = 0;
-        int right = characters.size() - 1;
+        int right = characterCS.size() - 1;
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            Character midCharacter = characters.get(mid);
-            int cmp = midCharacter.getNameC().compareTo(name);
+            CharacterC midCharacterC = characterCS.get(mid);
+            int cmp = midCharacterC.getNameC().compareTo(name);
 
             if (cmp == 0) {
-                return midCharacter;
+                return midCharacterC;
             } else if (cmp < 0) {
                 left = mid + 1;
             } else {
@@ -192,14 +192,14 @@ public class CharacterLinkedList {
         return null;
     }
 
-    private List<Character> toList() {
-        List<Character> characters = new ArrayList<>();
+    private List<CharacterC> toList() {
+        List<CharacterC> characterCS = new ArrayList<>();
         Node current = head;
         while (current != null) {
-            characters.add(current.character);
+            characterCS.add(current.characterC);
             current = current.next;
         }
-        return characters;
+        return characterCS;
     }
 }
 

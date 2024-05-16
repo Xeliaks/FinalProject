@@ -14,18 +14,34 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import com.example.finalproject.scenes.*;
+import com.example.finalproject.Entities.*;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class QuizC {
 
     private Stage primaryStage;
+    private CharacterLinkedList characterLinkedList = new CharacterLinkedList();
+    private CharacterC characterC = new CharacterC();
 
     public QuizC(Stage primaryStage) {
         this.primaryStage = primaryStage;
+        initializeCharacterList();
     }
+
+    private void initializeCharacterList() {
+        String folderPath = "src/main/characters";
+        characterLinkedList.loadFromFolder(folderPath);
+    }
+
 
     public Scene createScene() {
         AppMenuBar appMenuBarC = new AppMenuBar(primaryStage);
@@ -71,6 +87,15 @@ public class QuizC {
         VBox levelBoxC = new VBox(10, levelLabelC, levelFieldC);
 
         Button randomizeButtonC = new Button("Randomize");
+
+        Button importButtonC = new Button("Import");
+
+        Button exportButtonC = new Button("Export");
+
+
+
+
+
 
         Label ancestryLabelC = new Label("Ancestry:");
         ancestryLabelC.setStyle("-fx-text-fill: white;");
@@ -187,22 +212,23 @@ public class QuizC {
 
         Image uploadImageC = new Image("file:src/main/images/UPicButton.png");
         ImageView uploadPictureButtonC = new ImageView(uploadImageC);
-        uploadPictureButtonC.setFitWidth(150);
-        uploadPictureButtonC.setFitHeight(150);
+        uploadPictureButtonC.setFitWidth(200);
+        uploadPictureButtonC.setFitHeight(200);
         uploadPictureButtonC.setPreserveRatio(true);
         uploadPictureButtonC.setStyle("-fx-cursor: hand;");
 
         uploadPictureButtonC.setOnMouseClicked(event -> {
             FileChooser fileChooserC = new FileChooser();
+            fileChooserC.setTitle("Open Image File");
             fileChooserC.getExtensionFilters().add(new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png"));
+            File characterFolderC = new File("src/main/images/characters");
+            if (characterFolderC.exists() && characterFolderC.isDirectory()) {
+                fileChooserC.setInitialDirectory(characterFolderC);
+            }
             File selectedFileC = fileChooserC.showOpenDialog(primaryStage);
             if (selectedFileC != null) {
                 try {
                     Image selectedImageC = new Image(new FileInputStream(selectedFileC));
-                    double currentWidthC = uploadPictureButtonC.getFitWidth();
-                    double currentHeightC = uploadPictureButtonC.getFitHeight();
-                    uploadPictureButtonC.setFitWidth(currentWidthC * 2);
-                    uploadPictureButtonC.setFitHeight(currentHeightC * 2);
                     uploadPictureButtonC.setImage(selectedImageC);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -210,8 +236,105 @@ public class QuizC {
             }
         });
 
+
+        importButtonC.setOnAction(event -> {
+
+            FileChooser fileChooserC = new FileChooser();
+            fileChooserC.setTitle("Open Character File");
+            fileChooserC.getExtensionFilters().add(new FileChooser.ExtensionFilter("Character Files", "*.txt", "*.json"));
+            File characterFolderC = new File("src/main/characters");
+            if (characterFolderC.exists() && characterFolderC.isDirectory()) {
+                fileChooserC.setInitialDirectory(characterFolderC);
+            }
+            File selectedFileC = fileChooserC.showOpenDialog(primaryStage);
+            if (selectedFileC != null) {
+                try {
+                    List<String> lines = Files.readAllLines(selectedFileC.toPath());
+                    CharacterParser characterParser = new CharacterParser();
+                    CharacterC characterC = characterParser.parseCharacter(lines);
+                    characterLinkedList.add(characterC);
+                    nameFieldC.setText(characterC.getNameC());
+                    levelFieldC.setText(String.valueOf(characterC.getLevelC()));
+                    ancestryFieldC.setText(characterC.getAncestryC());
+                    backgroundFieldC.setText(characterC.getBackgroundC());
+                    classFieldC.setText(characterC.getClassC());
+                    strFieldC.setText(String.valueOf(characterC.getStrengthC()));
+                    dexFieldC.setText(String.valueOf(characterC.getDexterityC()));
+                    conFieldC.setText(String.valueOf(characterC.getConstitutionC()));
+                    intFieldC.setText(String.valueOf(characterC.getIntelligenceC()));
+                    wisFieldC.setText(String.valueOf(characterC.getWisdomC()));
+                    chaFieldC.setText(String.valueOf(characterC.getCharismaC()));
+                    alignmentFieldC.setText(characterC.getAlignmentC());
+                    acFieldC.setText(String.valueOf(characterC.getAcC()));
+                    hpFieldC.setText(String.valueOf(characterC.getHpC()));
+                    speedFieldC.setText(String.valueOf(characterC.getSpeedC()));
+                    perceptionFieldC.setText(String.valueOf(characterC.getPerceptionC()));
+                    attackFieldC.setText(characterC.getAttackC());
+                    bioAreaC.setText(characterC.getBioC());
+                    uploadPictureButtonC.setImage(new Image("file:" + characterC.getImageLinkC()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    System.out.println("Error: The file format is incorrect.");
+                }
+
+            }
+        });
+
+        exportButtonC.setOnAction(event -> {
+            FileChooser fileChooserC = new FileChooser();
+            fileChooserC.setTitle("Save Character File");
+            fileChooserC.getExtensionFilters().add(new FileChooser.ExtensionFilter("Character Files", "*.txt", "*.json"));
+            File characterFolderC = new File("src/main/characters");
+            if (characterFolderC.exists() && characterFolderC.isDirectory()) {
+                fileChooserC.setInitialDirectory(characterFolderC);
+            }
+            File saveFileC = fileChooserC.showSaveDialog(primaryStage);
+            if (saveFileC != null) {
+                try {
+                    List<String> lines = new ArrayList<>();
+                    lines.add("name: " + nameFieldC.getText());
+                    lines.add("level: " + levelFieldC.getText());
+                    lines.add("ancestry: " + ancestryFieldC.getText());
+                    lines.add("background: " + backgroundFieldC.getText());
+                    lines.add("class: " + classFieldC.getText());
+                    lines.add("strength: " + strFieldC.getText());
+                    lines.add("dexterity: " + dexFieldC.getText());
+                    lines.add("constitution: " + conFieldC.getText());
+                    lines.add("intelligence: " + intFieldC.getText());
+                    lines.add("wisdom: " + wisFieldC.getText());
+                    lines.add("charisma: " + chaFieldC.getText());
+                    lines.add("alignment: " + alignmentFieldC.getText());
+                    lines.add("ac: " + acFieldC.getText());
+                    lines.add("hp: " + hpFieldC.getText());
+                    lines.add("speed: " + speedFieldC.getText());
+                    lines.add("perception: " + perceptionFieldC.getText());
+                    lines.add("attack: " + attackFieldC.getText());
+                    lines.add("bio: " + bioAreaC.getText());
+
+                    Image characterImage = uploadPictureButtonC.getImage();
+                    if (characterImage != null && characterImage.getUrl() != null) {
+                        String imageUrl = characterImage.getUrl();
+                        if (imageUrl.startsWith("file:")) {
+                            imageUrl = imageUrl.substring(5);
+                        }
+                        lines.add("imageLink: " + imageUrl);
+                    } else {
+                        lines.add("imageLink: ");
+                    }
+
+                    Files.write(saveFileC.toPath(), lines);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
         gridPaneC.add(nameBoxC, 0, 0);
         gridPaneC.add(levelBoxC, 1, 0);
+        gridPaneC.add(importButtonC, 3, 0);
+        gridPaneC.add(exportButtonC, 4, 0);
         gridPaneC.add(randomizeButtonC, 5, 0);
 
         gridPaneC.add(ancestryBoxC, 0, 1);
@@ -261,5 +384,4 @@ public class QuizC {
         return sceneC;
     }
 }
-
 

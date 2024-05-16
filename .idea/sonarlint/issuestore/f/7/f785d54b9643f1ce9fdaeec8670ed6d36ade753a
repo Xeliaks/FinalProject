@@ -1,5 +1,18 @@
 
-¼
-java:S1192>"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 17 times.(ğ¦şÅûÿÿÿÿ8•Èó÷1J$dd7341dd-e9da-4c98-bdea-74642997c46a
 Ÿ
-java:S1192%"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 19 times.(âÀœøÿÿÿÿ8•Èó÷1J$c5ebd25e-2fd8-4b84-9b91-b972af7eeb96
+java:S11925"WDefine a constant instead of duplicating this literal "-fx-text-fill: white;" 19 times.(âÀœøÿÿÿÿ8¾¿‚ø1J$64a2fe06-3b08-4d51-b75b-f68f419ccbd7
+¼
+java:S1192N"tDefine a constant instead of duplicating this literal "-fx-background-color: black; -fx-text-fill: white;" 17 times.(ğ¦şÅûÿÿÿÿ8¾¿‚ø1J$7ad47612-528e-4552-bdea-19e055fca37b
+œ
+java:S1192)"TDefine a constant instead of duplicating this literal "src/main/characters" 3 times.(€îŠ¬ùÿÿÿÿ8¾¿‚ø1J$1ac595db-eec0-4e04-8bbe-2128628a010a
+•
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(Ÿ¼µ8ù¿‚ø1J$5f59570e-cd15-4ee8-b56b-9859fcd6cd28
+‚
+java:S1117ş">Rename "characterC" which hides the field declared at line 33.(Ï¬¬Š8ƒÀ‚ø1J$eb691b53-1c48-4cb2-aa6a-40550487fe45
+n	java:S106–"+Replace this use of System.out by a logger.(ë·ú8…À‚ø1J$f886ac2e-0951-43b6-910c-73f874be427e
+œ
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(ÄóÊÕúÿÿÿÿ8‹À‚ø1J$97ad49de-4fa2-4d7b-ae2e-c98ea8565efd
+s
+java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18‹À‚ø1J$897919b5-4980-445e-8a82-36b5efebb520
+v
+java:S1068!".Remove this unused "characterC" private field.(Ö€ãˆûÿÿÿÿ8‹À‚ø1J$54d4d63f-581f-48bb-a12a-bd26af163701

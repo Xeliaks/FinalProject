@@ -46,8 +46,6 @@ n
 >src/main/java/com/example/finalproject/scenes/CollectionC.java,4\c\4cc3e7411fb9a908f5cc6e8f82194ee161487506
 n
 >src/main/java/com/example/finalproject/scenes/CollectionM.java,7\e\7eab6177ecdaf9d5cf7cdee2fdd6de22190c98ac
-k
-;src/main/java/com/example/finalproject/scenes/Observer.java,5\5\55621571d1838e193cb989019728aabebbbf3741
 m
 =src/main/java/com/example/finalproject/scenes/AppMenubar.java,f\a\fabf8b1c5302ebfd5d4f6b0a78254d856d5f00b8
 m
@@ -193,8 +191,6 @@ G.idea/sonarlint/issuestore/e/d/ed67eb178d523a4b3f117dcbe0eda5196367ceec,8\a\8a
 
 Q.idea/sonarlint/securityhotspotstore/4/8/483a3bbbd187bd3b1e3658a6b38eb31f55fdd7c7,c\6\c6913adb5d5f91811b2b98e0b18db65426a45129
 
-Q.idea/sonarlint/securityhotspotstore/5/5/55621571d1838e193cb989019728aabebbbf3741,b\2\b247d3152d6c7a134dbeb90e3d7fc7009ec632ca
-
 Q.idea/sonarlint/securityhotspotstore/2/e/2e7eb26081a0abb2cc6949ef87b67e0829d034ae,b\e\be590b2235e20801f8c0c56902658ed8fbb42566
 
 Q.idea/sonarlint/securityhotspotstore/6/3/630d03c37c5ba40301aa0a189e7ae7477a7cddfa,e\1\e1d0f1bfb762572ec505fa91f7818a9acff01f97
@@ -246,8 +242,6 @@ G.idea/sonarlint/issuestore/a/2/a23fecf281bfe300797f845cbd9ec9025ab4ec47,f\a\fa
 Q.idea/sonarlint/securityhotspotstore/1/0/10f2119b18de4c2d93011c2acd27301df22c2983,1\8\181a24cd338adcdf010bd6ca3ad609e05d52c0c5
 
 Q.idea/sonarlint/securityhotspotstore/1/d/1d6f137ed1f3d2f0a99dd6a0a153e6f9abc39407,f\f\ffb5d337534f7f2e8c71010cffe418884dcba967
-n
->src/main/java/com/example/finalproject/Entities/Character.java,f\0\f0a1c6e1ae916113920bf508a24a30f521273dc7
 l
 <src/main/java/com/example/finalproject/Entities/Monster.java,0\f\0ff61032bdc68da7999c7ce2960526b290d629f7
 x
@@ -530,3 +524,11 @@ Q.idea/sonarlint/securityhotspotstore/0/3/0312f3c9cd7b016328740f37402bad4d79ece8
 Q.idea/sonarlint/securityhotspotstore/4/f/4f869a0354b17c64fd6ae1cd955c052ce02300c9,d\0\d0b0c7073a821f86012d3a56eff9d222d53e73e4
 
 Q.idea/sonarlint/securityhotspotstore/4/f/4fe0be4064eaaff9c41e5acff2252fb4eb83cd80,a\0\a022ebc3ea6014b25a79c62ff9e85167d08d6b96
+o
+?src/main/java/com/example/finalproject/Entities/CharacterC.java,e\8\e8386382dddb09a9e077eb5cb74ebd7c35699f33
+t
+Dsrc/main/java/com/example/finalproject/Entities/CharacterParser.java,d\5\d533d5bda9844935304db58954a4d4c64d18db41
+L
+src/main/Characters/John.txt,0\f\0f1ca78be74995a6f516d8b56ace990becbac5ac
+O
+src/main/Characters/Charlie.txt,d\5\d56988c429b2ea49ce78928925c179cbe28cccbf

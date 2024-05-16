@@ -1,11 +1,11 @@
 
-”	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΑΐΕ¥8©λυχ1J$e5587dfb-68de-4a6b-a4bd-342c2172179c
-”	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Β®±8©λυχ1J$8cf969b1-60b4-4843-89f1-6cade0be457b
-	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρƒγ8ªλυχ1J$de7d570f-3a9e-412d-a5f6-250c6c7ebfe1
+”	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΑΐΕ¥8©λυχ1J$8ee65b87-3bab-4f89-8734-f91ac98dd2a9
+”	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Β®±8©λυχ1J$4e9ada68-f388-4482-947e-849a3fca9b97
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ρƒγ8ªλυχ1J$c95271b6-898f-449a-bd04-0691ad5625a4
 f
-java:S2259¨"CA "NullPointerException" could be thrown; "start" is nullable here.(χΖγόÿÿÿÿ8ΏΌΎυχ1
+java:S2259¨"CA "NullPointerException" could be thrown; "start" is nullable here.(¦σογϋÿÿÿÿ8‹›½‚ψ1
 Z
-java:S2589‹"7Remove this expression which always evaluates to "true"(θύ»Τϋÿÿÿÿ8ΏΌΎυχ1
+java:S2589‹"7Remove this expression which always evaluates to "true"(θύ»Τϋÿÿÿÿ8‹›½‚ψ1
 Z
-java:S2589‰"7Remove this expression which always evaluates to "true"(ΦωΊ§ÿÿÿÿÿ8ΏΌΎυχ1
-d	java:S131=""Add a default case to this switch.(°Σχ8Έλυχ1J$b9a555fa-c888-41dd-8c8d-ff919b612ab3
+java:S2589‰"7Remove this expression which always evaluates to "true"(ΦωΊ§ÿÿÿÿÿ8‹›½‚ψ1
+d	java:S131=""Add a default case to this switch.(°Σχ8Έλυχ1J$05aff74d-1bce-436d-8621-fba94cc6fa5e
