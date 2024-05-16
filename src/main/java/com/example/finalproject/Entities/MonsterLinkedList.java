@@ -1,13 +1,8 @@
 package com.example.finalproject.Entities;
 
-import java.io.*;
-import java.util.LinkedList;
-
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +13,17 @@ public class MonsterLinkedList {
     public List<Monster> getMonsters() {
         return monsters;
     }
+
+    public Iterable<? extends Monster> getCharacters() {
+        List<Monster> characters = new ArrayList<>();
+        Node current = head;
+        while (current != null) {
+            characters.add(current.monster);
+            current = current.next;
+        }
+        return monsters;
+    }
+
     private static class Node {
         Monster monster;
         Node next;

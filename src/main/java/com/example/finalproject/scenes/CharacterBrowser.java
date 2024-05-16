@@ -15,10 +15,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import com.example.finalproject.Entities.*;
 
-public class Browser {
+public class CharacterBrowser {
     private Scene scene;
 
-    public Browser(CharacterC character) {
+    public CharacterBrowser(CharacterC character) {
         Label titleLabel = new Label("Character");
         titleLabel.setFont(Font.font("Book Antiqua", 24));
         titleLabel.setTextFill(Color.WHITE);

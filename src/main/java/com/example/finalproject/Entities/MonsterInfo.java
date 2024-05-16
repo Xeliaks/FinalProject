@@ -1,5 +1,6 @@
 package com.example.finalproject.Entities;
 
+
 import com.example.finalproject.scenes.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,20 +13,19 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class CharacterInfo extends VBox {
-    private CharacterC character;
+public class MonsterInfo extends VBox {
+    private Monster monster;
     private Stage primaryStage;
 
-    public CharacterInfo(CharacterC character, Stage primaryStage) {
-        this.character = character;
-        this.primaryStage = this.primaryStage;
+    public MonsterInfo(Monster monster, Stage primaryStage) {
+        this.monster = monster;
+        this.primaryStage = primaryStage;
         this.setAlignment(Pos.CENTER);
         this.setSpacing(10);
 
-
         HBox imageBox = new HBox();
         ImageView imageView = new ImageView();
-        Image image = new Image("file:" + character.getImageLinkC());
+        Image image = new Image("file:" + monster.getImageLinkM());
         imageView.setImage(image);
         imageView.setFitWidth(100);
         imageView.setFitHeight(100);
@@ -33,28 +33,23 @@ public class CharacterInfo extends VBox {
         imageBox.setAlignment(Pos.CENTER);
 
         HBox infoBox = new HBox(10);
-        Label nameLabel = new Label("Name: " + character.getNameC());
-        Label levelLabel = new Label("Level: " + character.getLevelC());
+        Label nameLabel = new Label("Name: " + monster.getNameM());
+        Label levelLabel = new Label("Level: " + monster.getLevelM());
         nameLabel.setTextFill(Color.WHITE);
         levelLabel.setTextFill(Color.WHITE);
         infoBox.getChildren().addAll(nameLabel, levelLabel);
         infoBox.setAlignment(Pos.CENTER);
 
-        HBox classBox = new HBox();
-        Label classLabel = new Label("Class: " + character.getCharacterClassC());
-        classLabel.setTextFill(Color.WHITE);
-        classBox.getChildren().add(classLabel);
-        classBox.setAlignment(Pos.CENTER);
 
-        this.getChildren().addAll(imageBox, infoBox, classBox);
+        this.getChildren().addAll(imageBox, infoBox);
         this.setAlignment(Pos.CENTER);
         this.setPadding(new Insets(10));
         this.setStyle("-fx-background-color: black;");
 
-
         this.setOnMouseClicked((MouseEvent event) -> {
-            CharacterBrowser characterBrowserScene = new CharacterBrowser(character);
-            this.primaryStage.setScene(characterBrowserScene.getScene());
+            MonsterBrowser monsterBrowserScene = new MonsterBrowser(monster, primaryStage);
+            primaryStage.setScene(monsterBrowserScene.getScene());
         });
     }
 }
+
